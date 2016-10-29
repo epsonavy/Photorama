@@ -9,12 +9,12 @@
 import Foundation
 
 enum Method: String {
-    case RecentPhotos = "flickr.photo.getRecent"
+    case RecentPhotos = "flickr.photos.getRecent"
 }
 
 struct FlickrAPI {
     private static let baseURLString = "https://api.flickr.com/services/rest"
-    private static let APIkey = "a6d819499131071f158fd740860aa5a88"
+    private static let APIkey = "b6c1e22b19b0e640ee3acde67c9368ff"
     private static func flickrURL(method method: Method, parameters: [String:String]?) -> NSURL {
         let components = NSURLComponents(string: baseURLString)!
         

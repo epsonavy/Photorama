@@ -13,6 +13,7 @@
 		AABA169D1DC4F6CE0004130A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AABA169B1DC4F6CE0004130A /* LaunchScreen.storyboard */; };
 		AABA16A51DC4F7050004130A /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABA16A41DC4F7050004130A /* PhotoViewController.swift */; };
 		AABA16A71DC5009F0004130A /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABA16A61DC5009F0004130A /* FlickrAPI.swift */; };
+		AABA16A91DC5060C0004130A /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABA16A81DC5060C0004130A /* PhotoStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AABA169E1DC4F6CE0004130A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AABA16A41DC4F7050004130A /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		AABA16A61DC5009F0004130A /* FlickrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
+		AABA16A81DC5060C0004130A /* PhotoStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				AABA169E1DC4F6CE0004130A /* Info.plist */,
 				AABA16A41DC4F7050004130A /* PhotoViewController.swift */,
 				AABA16A61DC5009F0004130A /* FlickrAPI.swift */,
+				AABA16A81DC5060C0004130A /* PhotoStore.swift */,
 			);
 			path = Photorama;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			files = (
 				AABA16931DC4F6CE0004130A /* AppDelegate.swift in Sources */,
 				AABA16A51DC4F7050004130A /* PhotoViewController.swift in Sources */,
+				AABA16A91DC5060C0004130A /* PhotoStore.swift in Sources */,
 				AABA16A71DC5009F0004130A /* FlickrAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
