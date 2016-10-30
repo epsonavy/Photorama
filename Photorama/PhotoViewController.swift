@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController {
+class PhotoViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet var collectionView: UICollectionView!
     var store: PhotoStore!
     let photoDataSource = PhotoDataSource()
@@ -16,6 +16,7 @@ class PhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = photoDataSource
+        collectionView.delegate = self
         
         store.fetchRecentPhotos() {
             (photosResult) -> Void in
@@ -30,6 +31,21 @@ class PhotoViewController: UIViewController {
                     print("Error: \(e)")
                 }
                 self.collectionView.reloadSections(NSIndexSet(index: 0))
+            }
+        }
+    }
+    
+    func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
+        let photo = photoDataSource.photos[indexPath.row]
+        store.fetchImageForPhoto(photo) { (result) -> Void in
+            NSOperationQueue.mainQueue().addOperationWithBlock() {
+                let photoIndex = self.photoDataSource.photos.indexOf(photo)!
+                let photoIndexPath = NSIndexPath(forRow: photoIndex, inSection: 0)
+                
+                if let cell = self.collectionView.cellForItemAtIndexPath(photoIndexPath)
+                    as? PhotoCollectionViewCell {
+                    cell.updateWithImage(photo.image)
+                }
             }
         }
     }
